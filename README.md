@@ -13,7 +13,7 @@ plink --allow-extra-chr --allow-no-sex --noweb --recode12 --vcf sinapis.recode.v
 plink --allow-extra-chr --allow-no-sex --noweb --recode12 --vcf juvernica.recode.vcf --make-bed --geno 0 --keep-allele-order --out juvernica
 plink --allow-extra-chr --allow-no-sex --noweb --recode12 --vcf all.recode.vcf --make-bed --geno 0 --keep-allele-order --out all
 
-for K in 2; \
+for K in 1 2 3 4 5 6; \
 do admixture --cv juvernica.ped $K | tee log${K}.out; done
 
 for K in 1 2 3 4 5 6; \
