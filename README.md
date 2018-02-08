@@ -21,6 +21,5 @@ do /home/venkat/bin/admixture_linux-1.3.0/admixture  -B2000  all.geno $K; done
 
 ```
 # Reference genome:
-# Reference genome:
 The leptidea refrence genome can be found in the ENA under the accesion number SAMEA104168055. Download it to use the mapping of population samples. 
 
