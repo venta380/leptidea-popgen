@@ -21,10 +21,6 @@ do /home/venkat/bin/admixture_linux-1.3.0/admixture  -B2000  all.geno $K; done
 
 ```
 # Reference genome:
-The leptidea reference genome can be found in the ENA under the accession number SAMEA104168055
-```
-samtools mpileup  -u -f ficAlb2.fa --no-BAQ --count-orphans --min-BQ 5 --bam-list bamlist.txt | bcftools call -c -  > $TMPDIR/consensus_real.vcf
-vcfutils.pl vcf2fq -d 5 -D 8000 $TMPDIR/consensus_real.vcf | gzip >  $TMPDIR/consensus_real.fq.gz
-seqtk seq -a $TMPDIR/consensus_real.fq.gz > consensus_real.fa
-```
+# Reference genome:
+The leptidea refrence genome can be found in the ENA under the accesion number SAMEA104168055. Download it to use the mapping of population samples. 
 
