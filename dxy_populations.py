@@ -13,6 +13,8 @@ pwd='/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private
 os.chdir(pwd)
 
 
+
+#load FST windows
 file1= "/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/kazak_sinapis_Swedish_sinapis_10000.windowed.weir.fst"    #MEAN_FST_0
 file2= "/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/spanish_sinapis_Swedish_sinapis_10000.windowed.weir.fst"  #MEAN_FST_1
 file3= "/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/kazak_sinapis_spanish_sinapis_10000.windowed.weir.fst"    #MEAN_FST_2
@@ -36,7 +38,7 @@ file18="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_priv
 
 
 
-
+# load CSV file with sites coverd in each window#load FST windows
 sites_kazak_sinapis   ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/bam_covrage_files/kazak_sinapis_10000.csv"
 sites_Swedish_sinapis ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/bam_covrage_files/Swedish_sinapis_10000.csv"
 sites_spanish_sinapis ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/bam_covrage_files/spanish_sinapis_10000.csv"
@@ -48,6 +50,7 @@ sites_spanish_reali   ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/bam_c
 #
 #
 
+# load site pi
 irish_juvernica_site_PI ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/irish_juvernica_site_PI.sites.pi.sites.pi"
 kazak_juvernica_site_PI ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/kazak_juvernica_site_PI.sites.pi.sites.pi"
 kaz_sin_site_PI         ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/kaz_sin_site_PI.sites.pi.sites.pi"
@@ -59,6 +62,9 @@ sinapis_site_PI         ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop
 reali_site_PI           ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/reali.PI.sites.sites.pi.sites.pi"
 juvernica_site_PI       ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/juvernica.PI.sites.sites.pi.sites.pi"
 
+
+
+# load allele freq files
 irish_juvernica_allele_frquencey ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/irish_juvernica_freq.frq"
 kazak_juvernica_allele_frquencey ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/kazak_juvernica_freq.frq"
 kaz_sin_allele_frquencey         ="/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private_2/kaz_sin_freq.frq"
