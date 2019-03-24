@@ -72,6 +72,6 @@ The function named ‘dxy_window_function’ In house developed python package �
 ## Results
 The results from the population genetic analysis has been placed in the directory ‘Popgen/results’. These files contain values for fst,Dxy,Pi, fixed, shared and private. Plots are created using the file Plots.py
 # Reference genome:
-The *Leptidea sinapis* reference genome can be found in the ENA under the accession number SAMEA104168055. Download it to use the mapping of population samples. 
+The *Leptidea sinapis* reference genome can be found in the ENA under the accession number SAMEA104168055. Download it to map of population samples. 
 
 
