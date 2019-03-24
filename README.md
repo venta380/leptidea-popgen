@@ -1,6 +1,6 @@
 # Leptidea Population genetics project
 # Generating the VCF file.
-Mapping of samples are done using BWA mem. The .bam files obtained from BWA are then processed using the best practices outlined by GATK. The scripts to run the mapping and genotyping are mentioned in the directory titled 'Genotying'. The FASTQ files are submitted to ENA and can be downloaded using the accession number. The VCF file can be downloaded from the following link https://www.dropbox.com/s/7n1mitj6yg37njk/removed_repeat_content.vcf.gz?dl=0. 
+Mapping of samples were done using BWA mem. The .bam files obtained from BWA are then processed using the best practices outlined by GATK. The scripts to run the mapping and genotyping are mentioned in the directory titled 'Genotying'. The FASTQ files are submitted to ENA and can be downloaded using the accession number PRJEB21838. The VCF file can be downloaded from the following link https://www.dropbox.com/s/7n1mitj6yg37njk/removed_repeat_content.vcf.gz?dl=0. 
 
 # PCA (principal component analysis)
 PCA is done using the tool SNPrelate from Bioconductor package in R. The R script PCA_snps.R takes a VCF file as input. This can be manually edited at line number 7 in the script in the variable "vcf.fn". 
