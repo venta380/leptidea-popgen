@@ -61,7 +61,12 @@ vcftools  --vcf   juvernica.recode.vcf --site-pi --out juvernica.PI.site
 vcftools  --vcf   juvernica.recode.vcf --freq --out  juvernica
 ```
 ## Calculating FST
-
+Fst is calculated in windows of 10kb across the genome using the bellow commands. 
+```
+vcftools --gzvcf removed_repeat_content.vcf.gz  --keep sinapis_juvernica  --max-missing 1.0 --recode --out juvernica_sinapis
+vcftools  --vcf   juvernica_sinapis.recode.vcf --weir-fst-pop .lists/juvernica.txt --weir-fst-pop keep .lists/sinapis.txt  --out juvernica_sinapis	
+#the mean FST from this output is later scaled to the number of sites covered in the windows. ((MEAN_FST*10000)/N_sites_covered)
+```
 
 
 # Reference genome:
