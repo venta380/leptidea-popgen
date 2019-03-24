@@ -38,7 +38,16 @@ genomeCoverageBed -d -ibam $i  > $filename'genomeCoverage.txt'
 echo $filename'genomeCoverage.txt' ' ...............Done...............'
 done
 ```
-The script split.py
+The split_windows_into_10.py takes fasta file and the list of genomeCoverage files to split up files in to 10 parts. This is used in multithreading to make the script run faster 
+
+```
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -10 ' 'Ref.fa'&
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -20 | tail -10' 'Ref.fa'&
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -30 | tail -10' 'Ref.fa'&
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -40 | tail -10' 'Ref.fa'&
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -50 | tail -3' 'Ref.fa'&
+wait 
+```
 
 # Reference genome:
 The *Leptidea sinapis* reference genome can be found in the ENA under the accession number SAMEA104168055. Download it to use the mapping of population samples. 
