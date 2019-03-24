@@ -41,15 +41,15 @@ done
 The split_windows_into_10.py takes fasta file and the list of genomeCoverage files to split up files in to 10 parts. This is used in multithreading to make the script run faster. The script get_N_sites.py gives the number of sites covered in each window. 
 
 ```
-python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -10 ' 'Ref.fa'&
-python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -20 | tail -10' 'Ref.fa'&
-python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -30 | tail -10' 'Ref.fa'&
-python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -40 | tail -10' 'Ref.fa'&
-python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -50 | tail -3' 'Ref.fa'&
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -10 ' 'Ref.fa' &
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -20 | tail -10' 'Ref.fa' &
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -30 | tail -10' 'Ref.fa' &
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -40 | tail -10' 'Ref.fa' &
+python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -50 | tail -3' 'Ref.fa' &
 wait 
 
 python get_N_sites_V2.0.py -i sinapis           -o  sinapis        	  -p 'scaf1' &
-python get_N_sites_V2.0.py -i reali             -o  reali        	  -p 'scaf1' &
+python get_N_sites_V2.0.py -i reali             -o  reali        	    -p 'scaf1' &
 python get_N_sites_V2.0.py -i sinapis_juvernica -o  sinapis_juvernica -p 'scaf1' &
 #see get_N_sites.sh for scripts run on all samples
 wait
