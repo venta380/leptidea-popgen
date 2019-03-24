@@ -11,7 +11,26 @@ import pandas
 
 #####divide coverage files into three files#############
 
-chromosome=pandas.read_csv(".final_fst_dxy_db")[['CHROM','BIN_START','BIN_END']]
+fasta=personal_popgen.fasta_dict(sys.argv[2])
+
+chromosome = pandas.DataFrame(columns=['CHROM','BIN_START','BIN_END'])
+##create windows
+for i in fasta.keys():
+        temp={}
+        if len(fasta[i]) >= 10000:
+                list_start=range(1,len(fasta[i]),10000)
+                list_start.pop()
+                list_end=range(10000,len(fasta[i]),10000)
+        else:
+                list_start=[1]
+                list_end=[10000]
+        chrom=[i]*len(list_end)
+        temp['CHROM']=pandas.Series(chrom)
+        temp['BIN_START']=pandas.Series(list_start)
+        temp['BIN_END']=pandas.Series(list_end)
+        temp_df = pandas.DataFrame(temp)
+        chromosome=personal_popgen.join_data_base([chromosome,temp_df])
+
 
 CHROMS=list(set(list(chromosome['CHROM'])))
 
@@ -38,7 +57,7 @@ subprocess.call(["mkdir scaf16"], shell=True)
 subprocess.call(["mkdir scaf17"], shell=True) 
 subprocess.call(["mkdir scaf18"], shell=True) 
 
-
+#split files
 
 def split_shit_up(CHROMS,n):
 	scaf1 =''
