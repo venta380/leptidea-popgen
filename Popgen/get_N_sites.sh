@@ -55,7 +55,23 @@ lists='/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/lists/'
 for i in scaf1 scaf2 scaf3 scaf4 scaf5 scaf6 scaf7 scaf8 scaf9 scaf10
 do
 echo '/'$i'/'
-
+python get_N_sites.py   './lists/irish_juvernica'  './lists/kaz_sin'         './irish_juvernica_kaz_sin'         '/'$i'/' &
+python get_N_sites.py   './lists/irish_juvernica'  './lists/kazak_juvernica' './irish_juvernica_kazak_juvernica' '/'$i'/' &
+python get_N_sites.py   './lists/irish_juvernica'  './lists/spanish_reali'   './irish_juvernica_spanish_reali'   '/'$i'/' &
+python get_N_sites.py   './lists/irish_juvernica'  './lists/spanish_sinapis' './irish_juvernica_spanish_sinapis' '/'$i'/' &
+python get_N_sites.py   './lists/irish_juvernica'  './lists/swe_sin_allele'  './irish_juvernica_swe_sin_allele'  '/'$i'/' &
+python get_N_sites.py   './lists/kaz_sin'          './lists/spanish_reali'   './kaz_sin_spanish_reali'           '/'$i'/' &
+python get_N_sites.py   './lists/kaz_sin'          './lists/spanish_sinapis' './kaz_sin_spanish_sinapis'         '/'$i'/' &
+python get_N_sites.py   './lists/kaz_sin'          './lists/swe_sin_allele'  './kaz_sin_swe_sin_allele'          '/'$i'/' &
+wait
+python get_N_sites.py   './lists/kazak_juvernica'  './lists/kaz_sin'         './kazak_juvernica_kaz_sin'         '/'$i'/' &
+python get_N_sites.py   './lists/kazak_juvernica'  './lists/spanish_reali'   './kazak_juvernica_spanish_reali'   '/'$i'/' &
+python get_N_sites.py   './lists/kazak_juvernica'  './lists/spanish_sinapis' './kazak_juvernica_spanish_sinapis' '/'$i'/' &
+python get_N_sites.py   './lists/kazak_juvernica'  './lists/swe_sin_allele'  './kazak_juvernica_swe_sin_allele'  '/'$i'/' &
+python get_N_sites.py   './lists/spanish_reali'    './lists/spanish_sinapis' './spanish_reali_spanish_sinapis'   '/'$i'/' &
+python get_N_sites.py   './lists/spanish_reali'    './lists/swe_sin_allele'  './spanish_reali_swe_sin_allele'    '/'$i'/' &
+python get_N_sites.py   './lists/spanish_sinapis'  './lists/swe_sin_allele'  './spanish_sinapis_swe_sin_allele'  '/'$i'/' &
+wait
 python get_N_sites_V2.0.py -i sinapis_juvernica -o  sinapis_juvernica -p $i &
 python get_N_sites_V2.0.py -i juvernica_reali   -o  juvernica_reali   -p $i &
 python get_N_sites_V2.0.py -i sinapis_reali     -o  sinapis_reali     -p $i &
