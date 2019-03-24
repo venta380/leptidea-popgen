@@ -141,26 +141,26 @@ def callcualte_windowed_pi_from_site_pi(population_pi, dataframe, sites_list, ou
 	return out
 
 
-#callcualte_windowed_pi_from_site_pi(irish_juvernica_site_PI_table, nextone, 'irish_juvernica_N_sites', 'irish_juvernica_PI')
+callcualte_windowed_pi_from_site_pi(irish_juvernica_site_PI_table, nextone, 'irish_juvernica_N_sites', 'irish_juvernica_PI')
 
-#site_pi=[irish_juvernica_site_PI_table,kazak_juvernica_site_PI_table,kaz_sin_site_PI_table,spanish_reali_site_PI_table,spanish_sinapis_site_PI_table,swe_sin_site_PI_table,sinapis_site_PI_table,reali_site_PI_table,juvernica_site_PI_table]
-#final_window_pi=['irish_juvernica','kazak_juvernica','kaz_sin','spanish_reali','spanish_sinapis','swe_sin',"sinapis_site","reali_site","juvernica_site"]
-#final_site_pi=['irish_juvernica_N_sites','kazak_juvernica_N_sites','kaz_sin_N_sites','spanish_reali_N_sites','spanish_sinapis_N_sites','swe_sin_allele_N_sites',"sinapis_N_sites","reali_N_sites","juvernica_N_sites"]
-#
-#new_stuff=[]
-#for q, a, s in zip(site_pi, final_window_pi, final_site_pi):
-#	#print [str(a)]
-#	print " "+ a + " "+ s + " "
-#	new=callcualte_windowed_pi_from_site_pi(q, nextone, s, a)
-#	new_stuff.append(new)
-#
-#nextone=personal_popgen.join_data_base(new_stuff)
-#
+site_pi=[irish_juvernica_site_PI_table,kazak_juvernica_site_PI_table,kaz_sin_site_PI_table,spanish_reali_site_PI_table,spanish_sinapis_site_PI_table,swe_sin_site_PI_table,sinapis_site_PI_table,reali_site_PI_table,juvernica_site_PI_table]
+final_window_pi=['irish_juvernica','kazak_juvernica','kaz_sin','spanish_reali','spanish_sinapis','swe_sin',"sinapis_site","reali_site","juvernica_site"]
+final_site_pi=['irish_juvernica_N_sites','kazak_juvernica_N_sites','kaz_sin_N_sites','spanish_reali_N_sites','spanish_sinapis_N_sites','swe_sin_allele_N_sites',"sinapis_N_sites","reali_N_sites","juvernica_N_sites"]
+
+new_stuff=[]
+for q, a, s in zip(site_pi, final_window_pi, final_site_pi):
+	#print [str(a)]
+	print " "+ a + " "+ s + " "
+	new=callcualte_windowed_pi_from_site_pi(q, nextone, s, a)
+	new_stuff.append(new)
+
+nextone=personal_popgen.join_data_base(new_stuff)
+
 nextone=0
 
-#sites_filter[[i+'_final_pi' for i in final_window_pi]].mean()
+sites_filter[[i+'_final_pi' for i in final_window_pi]].mean()
 
-#sites_filter=nextone[(nextone['irish_juvernica_N_sites'] >= 3000) & (nextone['kazak_juvernica_N_sites'] >= 3000) & (nextone['kaz_sin_N_sites'] >= 3000) & (nextone['spanish_reali_N_sites'] >= 3000) & (nextone['spanish_sinapis_N_sites'] >= 3000)& (nextone['swe_sin_allele_N_sites'] >= 3000)& (nextone['sinapis_N_sites'] >= 3000)& (nextone['reali_N_sites'] >= 3000)& (nextone['juvernica_N_sites'] >= 3000)]
+sites_filter=nextone[(nextone['irish_juvernica_N_sites'] >= 3000) & (nextone['kazak_juvernica_N_sites'] >= 3000) & (nextone['kaz_sin_N_sites'] >= 3000) & (nextone['spanish_reali_N_sites'] >= 3000) & (nextone['spanish_sinapis_N_sites'] >= 3000)& (nextone['swe_sin_allele_N_sites'] >= 3000)& (nextone['sinapis_N_sites'] >= 3000)& (nextone['reali_N_sites'] >= 3000)& (nextone['juvernica_N_sites'] >= 3000)]
 
 ##population script 
 freq_list=["irish_juvernica","kazak_juvernica","kaz_sin","spanish_reali","spanish_sinapis","swe_sin_allele"]
