@@ -67,7 +67,7 @@ vcftools --gzvcf removed_repeat_content.vcf.gz  --keep sinapis_juvernica  --max-
 vcftools  --vcf   juvernica_sinapis.recode.vcf --weir-fst-pop .lists/juvernica.txt --weir-fst-pop keep .lists/sinapis.txt  --out juvernica_sinapis	
 #the mean FST from this output is later scaled to the number of sites covered in the windows. ((MEAN_FST*10000)/N_sites_covered)
 ```
-## Calculating Dxy, and fixed positions. 
+## Calculating Dxy and fixed positions. 
 The function named ‘dxy_window_function’ In house developed python package ‘personal_popgen.py’ was used to calculate DXY. This script also outputs the fixed, shared and private polymorphisms. The script dxy_populations.py uses the function and allele frequency files to calculate DXY. 
 
 
