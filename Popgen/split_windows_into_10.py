@@ -11,7 +11,7 @@ import pandas
 
 #####divide coverage files into three files#############
 
-chromosome=pandas.read_csv("/proj/b2014034/nobackup/POPULATION_RESEQ/final_VCF/pop_stats_shared_private/final_fst_dxy_db")[['CHROM','BIN_START','BIN_END']]
+chromosome=pandas.read_csv(".final_fst_dxy_db")[['CHROM','BIN_START','BIN_END']]
 
 CHROMS=list(set(list(chromosome['CHROM'])))
 
@@ -19,24 +19,24 @@ CHROMS=list(set(list(chromosome['CHROM'])))
 
 files=subprocess.check_output([str(sys.argv[1])],shell=True).split()
 
-#subprocess.call(["mkdir scaf1"], shell=True) 
-#subprocess.call(["mkdir scaf2"], shell=True) 
-#subprocess.call(["mkdir scaf3"], shell=True) 
-#subprocess.call(["mkdir scaf4"], shell=True) 
-#subprocess.call(["mkdir scaf5"], shell=True) 
-#subprocess.call(["mkdir scaf6"], shell=True) 
-#subprocess.call(["mkdir scaf7"], shell=True) 
-#subprocess.call(["mkdir scaf8"], shell=True) 
-#subprocess.call(["mkdir scaf9"], shell=True) 
-#subprocess.call(["mkdir scaf10"], shell=True) 
-#subprocess.call(["mkdir scaf11"], shell=True)
-#subprocess.call(["mkdir scaf12"], shell=True) 
-#subprocess.call(["mkdir scaf13"], shell=True) 
-#subprocess.call(["mkdir scaf14"], shell=True) 
-#subprocess.call(["mkdir scaf15"], shell=True) 
-#subprocess.call(["mkdir scaf16"], shell=True) 
-#subprocess.call(["mkdir scaf17"], shell=True) 
-#subprocess.call(["mkdir scaf18"], shell=True) 
+subprocess.call(["mkdir scaf1"], shell=True) 
+subprocess.call(["mkdir scaf2"], shell=True) 
+subprocess.call(["mkdir scaf3"], shell=True) 
+subprocess.call(["mkdir scaf4"], shell=True) 
+subprocess.call(["mkdir scaf5"], shell=True) 
+subprocess.call(["mkdir scaf6"], shell=True) 
+subprocess.call(["mkdir scaf7"], shell=True) 
+subprocess.call(["mkdir scaf8"], shell=True) 
+subprocess.call(["mkdir scaf9"], shell=True) 
+subprocess.call(["mkdir scaf10"], shell=True) 
+subprocess.call(["mkdir scaf11"], shell=True)
+subprocess.call(["mkdir scaf12"], shell=True) 
+subprocess.call(["mkdir scaf13"], shell=True) 
+subprocess.call(["mkdir scaf14"], shell=True) 
+subprocess.call(["mkdir scaf15"], shell=True) 
+subprocess.call(["mkdir scaf16"], shell=True) 
+subprocess.call(["mkdir scaf17"], shell=True) 
+subprocess.call(["mkdir scaf18"], shell=True) 
 
 
 
