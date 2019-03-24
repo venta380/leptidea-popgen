@@ -69,10 +69,8 @@ vcftools  --vcf   juvernica_sinapis.recode.vcf --weir-fst-pop .lists/juvernica.t
 ```
 ## Calculating Dxy and fixed positions. 
 The function named ‘dxy_window_function’ In house developed python package ‘personal_popgen.py’ was used to calculate DXY. This script also outputs the fixed, shared and private polymorphisms. The script dxy_populations.py uses the function and allele frequency files to calculate DXY. 
-
-
-
-
+## Results
+The results from the population genetic analysis has been placed in the directory ‘Popgen/results’. These files contain values for fst,Dxy,Pi, fixed, shared and private. Plots are created using the file Plots.py
 # Reference genome:
 The *Leptidea sinapis* reference genome can be found in the ENA under the accession number SAMEA104168055. Download it to use the mapping of population samples. 
 
