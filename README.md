@@ -38,8 +38,7 @@ genomeCoverageBed -d -ibam $i  > $filename'genomeCoverage.txt'
 echo $filename'genomeCoverage.txt' ' ...............Done...............'
 done
 ```
-The split_windows_into_10.py takes fasta file and the list of genomeCoverage files to split up files in to 10 parts. This is used in multithreading to make the script run faster. The script get_N_sites.py gives the number of sites covered in each window. The file FINAL_db_N_sites is the final output that contains the sites number of sites covered in each window.
-
+The split_windows_into_10.py takes fasta file and the list of genomeCoverage files to split up files in to 10 parts. This is used in multithreading to make the script run faster. The script get_N_sites.py gives the number of sites covered in each window. The file FINAL_db_N_sites is the final output that contains the number of sites covered in each window.
 ```
 python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -10 ' 'Ref.fa'&
 python split_windows_into_10.py  'ls /bam_covrage_files/*.txt | head -20 | tail -10' 'Ref.fa'&
@@ -54,6 +53,15 @@ python get_N_sites_V2.0.py -i sinapis_juvernica -o  sinapis_juvernica -p $i &
 #see get_N_sites.sh for scripts run on all samples
 wait
 ```
+## Obtaining the allele frequency and nucleotide diversity files
+Allele frequency and nucleotide diversity files are used to calculate Dxy, pi, number of fixed, number of shared and number of private polymorphisms in each window across the genome. vcftools was used to obtain allele frequency and nucleotide diversity files using the bellow commands. The command option --max-missing 1.0 is used to output all the SNPs with no missing data
+```
+vcftools --gzvcf removed_repeat_content.vcf.gz  --keep .lists/juvernica.txt  --max-missing 1.0 --recode --out juvernica
+vcftools  --vcf   juvernica.recode.vcf --site-pi --out juvernica.PI.site	
+vcftools  --vcf   juvernica.recode.vcf --freq --out  juvernica
+```
+
+
 
 # Reference genome:
 The *Leptidea sinapis* reference genome can be found in the ENA under the accession number SAMEA104168055. Download it to use the mapping of population samples. 
