@@ -28,6 +28,16 @@ do /home/venkat/bin/admixture_linux-1.3.0/admixture  -B2000  all.geno $K; done
 # Population genetics
 The population genetic statistics are calculated in this section all the scripts for this are mentioned in the directory ‘Popgen’
 ## Pre processing 
+To run the popgen analysis unbiased to the coverage we will need to extract the total number of positions covered in a window. The per site coverage for each sample can be obtained using the bellow BEDTools command. 
+```
+for i in $(ls $bamdir*.final.bam)
+do
+filename=$(basename -- "$i")
+filename="${filename%final.bam*}"
+genomeCoverageBed -d -ibam $i  > $filename'genomeCoverage.txt'
+echo $filename'genomeCoverage.txt' ' ...............Done...............'
+done
+```
 The script split.py
 
 # Reference genome:
